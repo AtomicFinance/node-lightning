@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 import { EventEmitter } from "events";
-import * as zmq from "zeromq";
+import * as zmq from "zeromq/v5-compat";
 import { IBitcoindOptions } from "./BitcoindOptions";
 import { jsonrpcRequest } from "./JsonRpcRequest";
 import { ConstantBackoff } from "./policies/ConstantBackoff";
@@ -33,8 +33,8 @@ export class BitcoindClient extends EventEmitter {
     public jsonRpcOptions: JsonRpcOptions;
     public id: number;
 
-    public rawTxSock: zmq.socket;
-    public rawBlockSock: zmq.socket;
+    public rawTxSock: zmq.Socket;
+    public rawBlockSock: zmq.Socket;
 
     constructor(opts: IBitcoindOptions) {
         super();
