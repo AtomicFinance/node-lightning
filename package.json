@@ -40,7 +40,7 @@
     "lerna": "^6.4.1",
     "mocha": "^10.2.0",
     "node-addon-api": "^4.2.0",
-    "node-gyp": "^8.4.1",
+    "node-gyp": "^10.0.0",
     "nodemon": "^2.0.20",
     "nyc": "^15.1.0",
     "prettier": "^2.8.4",
